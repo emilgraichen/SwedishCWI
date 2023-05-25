@@ -2,7 +2,7 @@
 
 This dataset is contains words and their annotated complexity level, word lengths and the frequencies of each word in three corpora. The purpose of the dataset is to facilitate training Complex Word Identification (CWI) systems. The dataset is based on the SwedishCWI dataset developed by Smolenska (2018), who annotated the word complexity levels in the dataset as a part of the Master's thesis "Complex Word Identification for Swedish".
 
-# Structure of the dataset:
+## Structure of the dataset:
 
 
 ![A picture showing the structure of the dataset](images/dataset_structure.png?raw=true "Title")
@@ -11,7 +11,7 @@ The first column contains the word, the second column contains the word difficul
 
 
 
-# Links to the resources used:
+## Links to the resources used:
 
 Stockholm Umeå Corpus X 3.0: https://spraakbanken.gu.se/resurser/sucx3
 
