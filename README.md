@@ -23,3 +23,7 @@ TwitterMix: https://spraakbanken.gu.se/resurser/twitter
 The link to the thesis by Smolenska (2018) is found here: https://www.semanticscholar.org/paper/Complex-Word-Identification-for-Swedish-Smolenska/8728f63b7a08b1c9668bef101ba36a7950aa2432
 
 The link to the original CWI dataset is found here: https://github.com/gsmolenska/CWIdataset/blob/master/SwedishCWI.txt
+
+
+## References: 
+Smolenska, G. (2018). Complex word identification for swedish. Recieved from: https://www.semanticscholar.org/paper/Complex-Word-Identification-for-Swedish-Smolenska/8728f63b7a08b1c9668bef101ba36a7950aa2432 (2023-05-25)
