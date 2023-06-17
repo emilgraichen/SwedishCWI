@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, accuracy_score
 import pandas as pd
 
 
-url = r".\datasets\SwedishCWItrainingDataset.csv"
+url = r"SwedishCWItrainingDataset.csv"
 df = pd.read_csv(url, encoding="Latin-1", delimiter=",")
 
 print(df.head())
@@ -24,7 +24,7 @@ regressor = RandomForestClassifier(n_estimators=250, min_samples_split = 3, min_
 
 
 
-def train_baseline_model():
+def train_model():
     '''Trains and tests the benchmark model trained on 5 features'''
     X_train_baseline = X_train.filter(['Frequency_SUC', 'Length', "FreqBlog", "FreqTwitter"], axis=1).values
     X_test_baseline = X_test.filter(['Frequency_SUC', 'Length', "FreqBlog", "FreqTwitter"], axis=1).values
@@ -45,12 +45,12 @@ def model_accuracy(y_test, y_pred):
 
 
 if __name__ == "__main__":
-    print('\nFrequency model results (trained on 5 frequency features):')
-    y_pred = train_baseline_model()
+    print('\nFrequency model results (trained on 4 frequency features):')
+    y_pred = train_model()
     print(model_classification_report(y_test, y_pred))
     print(model_accuracy(y_test, y_pred))
 
     #saves the model as a joblib-file for reusing
-    joblib.dump(regressor, "./random_forest_multi_test.joblib")
+    joblib.dump(regressor, "./SwedishCWI_RFC.joblib")
     
     
