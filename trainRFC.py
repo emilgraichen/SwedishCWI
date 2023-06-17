@@ -25,7 +25,7 @@ regressor = RandomForestClassifier(n_estimators=250, min_samples_split = 3, min_
 
 
 def train_model():
-    '''Trains and tests the benchmark model trained on 5 features'''
+    '''Trains and tests the benchmark model trained on 4 features'''
     X_train_baseline = X_train.filter(['Frequency_SUC', 'Length', "FreqBlog", "FreqTwitter"], axis=1).values
     X_test_baseline = X_test.filter(['Frequency_SUC', 'Length', "FreqBlog", "FreqTwitter"], axis=1).values
     regressor.fit(X_train_baseline, y_train)
@@ -45,12 +45,12 @@ def model_accuracy(y_test, y_pred):
 
 
 if __name__ == "__main__":
-    print('\nFrequency model results (trained on 4 frequency features):')
+    print('\nFrequency model results (trained on 4 features):')
     y_pred = train_model()
     print(model_classification_report(y_test, y_pred))
     print(model_accuracy(y_test, y_pred))
 
     #saves the model as a joblib-file for reusing
     joblib.dump(regressor, "./SwedishCWI_RFC.joblib")
-    
+
     
